@@ -1,9 +1,8 @@
-// gather implementado con send y recv, lo que hace es que cada proceso envia un numero
-// y el proceso 0 los recibe y los guarda en un vector.
+//Recoge una serie de datos de varios procesos en un único proceso raíz (operación en la cual interviene también el propio proceso raíz).
 
 #include <stdio.h>
 #include <string.h>
-#include </usr/include/mpi/mpi.h>
+#include <mpi.h>
 
 int main(int argc, char **argv){
 

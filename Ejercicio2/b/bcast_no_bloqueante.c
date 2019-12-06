@@ -1,4 +1,4 @@
-// idem a los anteriores pero los mensajes son no bloqueantes
+// los mensajes son asincronos
 
 #include <stdio.h>
 #include <string.h>
@@ -7,7 +7,7 @@
 int main(int argc, char **argv){
 
     int my_rank, nproc, n, message, recibido;
-    //char n, message[20];
+    
     MPI_Status status;
     MPI_Request request;
 
@@ -31,9 +31,7 @@ int main(int argc, char **argv){
     }
 
     MPI_Irecv(&message, 1, MPI_INT, 0, 99, MPI_COMM_WORLD, &request);
-
     MPI_Wait(&request, &status);
-
     
     printf("Hola, soy el proceso %d y el número es el %d \n", my_rank, message);
 

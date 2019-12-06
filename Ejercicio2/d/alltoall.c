@@ -1,9 +1,8 @@
-// alltoall implementado con send y recv, auqnue de momento solo funciona para 3
-// procesos solamente.
+//Realiza una comunicación todos a todos los procesos de un comunicador.
 
 #include <stdio.h>
 #include <string.h>
-#include </usr/include/mpi/mpi.h>
+#include <mpi.h>
 
 int main(int argc, char **argv){
 
@@ -15,9 +14,9 @@ int main(int argc, char **argv){
     MPI_Comm_size(MPI_COMM_WORLD, &nproc);
     MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
 
-    char v1[4] = "123";
-    char v2[4] = "456";
-    char v3[4] = "789";
+    char v1[4] = "223";
+    char v2[4] = "556";
+    char v3[4] = "889";
 
     char * m[3] = {v1, v2, v3}; 
 

@@ -1,11 +1,7 @@
-// scatter implementado con send y recv, lo que hace es que el proceso 0 arma un vector
-// con tantos numeros como procesos y envia a cada proceso el numero + 1.
-// ejemplo: al proceso 0 envia el 1
-//          al proceso 1 el 2 y asi sucesivamente.
-
+//Un proceso raíz trocea un mensaje en partes iguales y los envía individualmente al resto de procesos y a sí mismo.
 #include <stdio.h>
 #include <string.h>
-#include </usr/include/mpi/mpi.h>
+#include <mpi.h>
 
 int main(int argc, char **argv){
 

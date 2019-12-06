@@ -1,0 +1,4 @@
+c) ¿Existe alguna diferencia entre ambas soluciones? ¿Fue necesario en alguna de ellas el uso de sincronización
+por barreras?
+
+Si existe una diferencia, en las soluciones no bloqueantes es necesario implementar la funcion MPI_WAIT() 

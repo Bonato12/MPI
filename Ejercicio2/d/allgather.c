@@ -1,10 +1,8 @@
-// Lo que hace es que todos los procesos envian a todos los procesos su pid
-// cada procesos cuando recibe los pid los va sumando en una variable y luego lo
-// muestra por pantalla.
+//patrón de comunicación de muchos a muchos 
 
 #include <stdio.h>
 #include <string.h>
-#include </usr/include/mpi/mpi.h>
+#include <mpi.h>
 
 int main(int argc, char **argv){
 
@@ -26,7 +24,6 @@ int main(int argc, char **argv){
     for(int i = 0; i < num_procs; i++) {
 
         MPI_Recv(&mensaje, 1, MPI_INT, MPI_ANY_SOURCE, 99, MPI_COMM_WORLD, &status);
-
         sum += mensaje;
 
     }
